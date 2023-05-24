@@ -36,15 +36,66 @@ while True:
          print("Você escolheu a opção [ 2 ] - Conversão das bases binário e octadecimal para decimal")
          print('PROCESSANDO...')
          sleep(0.5)
-         
-         binario = int(input("Digite um número em binário: "))
-         octadecimal = int(input("Digite um número em octadecimal: "))
-         
-         
     
-        
+                 
+         def octdecimal(octal):
+             conversao = 0
+             tamanho = len(octal) - 1
+             pos = 0
+             while tamanho >= 0:
+                 digito = octal[pos]
+                 conversao += int(digito) * (8 ** tamanho)
+                 pos += 1
+                 tamanho -= 1
+             return conversao
+                 
+                 
+         def bindecimal(binary):
+             conversao = 0
+             tamanho = len(binary) - 1
+             pos = 0
+             while tamanho >= 0:
+                 digito = binary[pos]
+                 conversao += int(digito) * (2 ** tamanho)
+                 pos += 1
+                 tamanho -= 1
+             return conversao
+         
+         
+         sumOct = octdecimal(input("Digite um número em octadecimal: "))
+         print(sumOct)
+         sumDec = bindecimal(input("Digite um número em binário: "))
+         print(sumDec)
+         
+         
     elif opcao == 3:
-        print()
+         print("Você escolheu a opção [ 3 ] - Calculadora aritmética de binários, que contemple as operações de soma e subtração")
+         print('PROCESSANDO...')
+         sleep(0.5)
+         
+         while True:
+            calculadora = int(input('''
+[ 1 ] - Soma binária
+[ 2 ] - Subtração binária
+[ 3 ] - Sair da calculadora binária'''))
+            
+            if calculadora == 1:
+                print("Você escolheu a opção [ 1 ] - Soma binária")
+                print('PROCESSANDO...')
+                sleep(0.5)
+                
+                
+                
+            elif calculadora == 2:
+                print()
+                
+                
+            elif calculadora == 3:
+                break
+         
+         
+         
+         
         
     elif opcao == 4:
         break
@@ -54,6 +105,9 @@ while True:
         print('Gabriel Ortega')
         print('Isabelle Santini')
         sleep(1)
+    
+    else:
+        print('Opção inválida! Escolha dentre as opções pré-existentes do menu!')
     
     
 
