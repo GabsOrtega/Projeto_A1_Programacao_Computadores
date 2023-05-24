@@ -20,7 +20,7 @@ while True:
     if opcao == 1:
         print("Você escolheu a opção [ 1 ] Conversão para decimal para as bases binário e octadecimal")
         print('PROCESSANDO...')
-        sleep(0.5)
+        sleep(1)
     
         decimal = int(input("Digite um número inteiro decimal: "))
         print('PROCESSANDO...')
@@ -35,7 +35,7 @@ while True:
     elif opcao == 2:
          print("Você escolheu a opção [ 2 ] - Conversão das bases binário e octadecimal para decimal")
          print('PROCESSANDO...')
-         sleep(0.5)
+         sleep(1)
     
                  
          def octdecimal(octal):
@@ -82,12 +82,36 @@ while True:
             if calculadora == 1:
                 print("Você escolheu a opção [ 1 ] - Soma binária")
                 print('PROCESSANDO...')
-                sleep(0.5)
+                sleep(1)
+
+
+                def somaBinaria(numBin1, numBin2):
+                    numBin1 = int(numBin1, 2)
+                    numBin2 = int(numBin2, 2)
+
+                    resultado = bin(numBin1 + numBin2)[2:]
+
+                    return resultado
                 
-                
-                
+                binario = somaBinaria(input("Digite o primeiro número binário: "), input("Digite o segundo número binário: "))
+                print(binario)
+
             elif calculadora == 2:
-                print()
+                print("Você escolheu a opção [ 2 ] - Subtração binária")
+                print('PROCESSANDO...')
+                sleep(1)
+
+                def subtracaoBinaria(numBin1, numBin2):
+                    numBin1 = int(numBin1, 2)
+                    numBin2 = int(numBin2, 2)
+
+                    resultado = bin(numBin1 - numBin2)[2:]
+
+                    return resultado
+                
+                binario = subtracaoBinaria(input("Digite o primeiro número binário: "), input("Digite o segundo número binário: "))
+                print(binario)
+            
                 
                 
             elif calculadora == 3:
