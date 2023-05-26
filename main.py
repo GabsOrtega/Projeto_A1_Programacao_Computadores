@@ -1,5 +1,10 @@
 from time import sleep
 
+'''Nome: Gabriel Ortega - RGM: 34659293
+   Nome: Isabelle Santini - RGM: 
+   Campus Paulista
+'''
+   
 print('+=' * 30)
 print("Seja Bem vindo ao Projeto A1 de Programação de Computadores!")
 print('+=' * 30)
@@ -14,7 +19,6 @@ while True:
 [ 2 ] - Conversão das bases binário e octadecimal para decimal
 [ 3 ] - Calculadora aritmética de binários, que contemple as operações de soma e subtração
 [ 4 ] - Sair do Programa
-[ 5 ] - Integrantes do grupo (extra) 
 '''))
 
     if opcao == 1:
@@ -61,23 +65,28 @@ while True:
                  tamanho -= 1
              return conversao
          
+         numOct = input("Digite um número em octadecimal: ")
+         sumOct = octdecimal(numOct)
+         print(f'A conversão do número octadecimal {numOct} para decimal é igual a {sumOct}')
+         sleep(1)
          
-         sumOct = octdecimal(input("Digite um número em octadecimal: "))
-         print(sumOct)
-         sumDec = bindecimal(input("Digite um número em binário: "))
-         print(sumDec)
+         numBin = input("Digite um número em binário: ")
+         sumDec = bindecimal(numBin)
+         print(f'A conversão do número binário {numBin} para decimal é igual a {sumDec}')
+         sleep(1)
          
          
     elif opcao == 3:
          print("Você escolheu a opção [ 3 ] - Calculadora aritmética de binários, que contemple as operações de soma e subtração")
          print('PROCESSANDO...')
-         sleep(0.5)
+         sleep(1)
          
          while True:
             calculadora = int(input('''
 [ 1 ] - Soma binária
 [ 2 ] - Subtração binária
-[ 3 ] - Sair da calculadora binária'''))
+[ 3 ] - Sair da calculadora binária
+'''))
             
             if calculadora == 1:
                 print("Você escolheu a opção [ 1 ] - Soma binária")
@@ -85,57 +94,58 @@ while True:
                 sleep(1)
 
 
-                def somaBinaria(numBin1, numBin2):
-                    numBin1 = int(numBin1, 2)
-                    numBin2 = int(numBin2, 2)
+                def somaBinaria(BinaryI, BinaryII):
+                    BinaryI = int(BinaryI, 2)
+                    BinaryII = int(BinaryII, 2)
 
-                    resultado = bin(numBin1 + numBin2)[2:]
+                    resultado = bin(BinaryI + BinaryII)[2:]
 
                     return resultado
                 
-                binario = somaBinaria(input("Digite o primeiro número binário: "), input("Digite o segundo número binário: "))
-                print(binario)
+                BinaryI = input("Digite o primeiro número binário: ")
+                BinaryII = input("Digite o segundo número binário: ")
+                binario = somaBinaria(BinaryI, BinaryII)
+                print(f'A soma binária dos números {BinaryI} + {BinaryII} é igual a {binario}')
+                sleep(1)
 
             elif calculadora == 2:
                 print("Você escolheu a opção [ 2 ] - Subtração binária")
                 print('PROCESSANDO...')
                 sleep(1)
 
-                def subtracaoBinaria(numBin1, numBin2):
-                    numBin1 = int(numBin1, 2)
-                    numBin2 = int(numBin2, 2)
+                def subtracaoBinaria(BinaryI, BinaryII):
+                    BinaryI = int(BinaryI, 2)
+                    BinaryII = int(BinaryII, 2)
 
-                    resultado = bin(numBin1 - numBin2)[2:]
+                    resultado = bin(BinaryI - BinaryII)[2:]
 
                     return resultado
                 
-                binario = subtracaoBinaria(input("Digite o primeiro número binário: "), input("Digite o segundo número binário: "))
-                print(binario)
+                BinaryI = input("Digite o primeiro número binário: ")
+                BinaryII = input("Digite o segundo número binário: ")
+                binario = subtracaoBinaria(BinaryI, BinaryII)
+                print(f'A subtração binária dos números {BinaryI} - {BinaryII} é igual a {binario}')
+                sleep(1)
             
                 
                 
             elif calculadora == 3:
+                print('Saindo da calculadora binária...')
+                sleep(1)
                 break
+                
          
          
          
          
         
     elif opcao == 4:
+        print('Saindo do programa... Até mais!')
+        sleep(1)
         break
     
-    elif opcao == 5:
-        print("Os integrantes do grupo são:")
-        print('Gabriel Ortega')
-        print('Isabelle Santini')
-        sleep(1)
     
     else:
         print('Opção inválida! Escolha dentre as opções pré-existentes do menu!')
+        sleep(1)
     
-    
-
-'''Opção 1: Conversão para decimal para as bases binário e octadecimal.
-Opção 2: Conversão das bases binário e octadecimal para decimal.
-Opção 3: Calculadora aritmética de binários, que contemple as operações de soma e subtração.
-Opção 4: Sair do programa'''
