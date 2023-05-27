@@ -1,7 +1,7 @@
 from time import sleep
 
 '''Nome: Gabriel Ortega - RGM: 34659293
-   Nome: Isabelle Santini - RGM: 
+   Nome: Isabelle Santini - RGM: 33955999
    Campus Paulista
 '''
    
@@ -11,15 +11,15 @@ print('+=' * 30)
 print()
 
 while True:
-    print('+=' * 30)
-    print('MENU')
-    print('+='* 30)
-    opcao = int(input('''Escolha a opção de sua preferência:
-[ 1 ] - Conversão para decimal para as bases binário e octadecimal
+    print('+=' * 16)
+    print(f"{'MENU':^30}")
+    print('+='* 16)
+    print('''[ 1 ] - Conversão para decimal para as bases binário e octadecimal
 [ 2 ] - Conversão das bases binário e octadecimal para decimal
 [ 3 ] - Calculadora aritmética de binários, que contemple as operações de soma e subtração
 [ 4 ] - Sair do Programa
-'''))
+''')
+    opcao = int(input("Escolha uma opção: "))
 
     if opcao == 1:
         print("Você escolheu a opção [ 1 ] Conversão para decimal para as bases binário e octadecimal")
@@ -133,6 +133,10 @@ while True:
                 print('Saindo da calculadora binária...')
                 sleep(1)
                 break
+            
+            else:
+                print('Opção inválida! Escolha dentre as opções pré-existentes do menu!')
+                sleep(1)
                 
          
          
